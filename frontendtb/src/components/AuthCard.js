@@ -72,7 +72,7 @@ function AuthCard() {
 
     try {
       dispatch(showLoading());
-      const response = await api.post("/user-register", {
+      const response = await api.post("/api/user-register", {
 
         firstname: firstName,
         lastname: LastName,
