@@ -25,7 +25,7 @@ function TripRequests() {
   const getMyTrips = async () => {
     try {
       dispatch(showLoading());
-      const response = await api.get("/trips/get-my-trips", {
+      const response = await api.get("/api/trips/get-my-trips", {
         headers: { Authorization: ` ${token}` },
       });
       setTrips(response?.data?.trips || []);
@@ -47,7 +47,7 @@ function TripRequests() {
     try {
       dispatch(showLoading());
       await api.patch(
-        `/trips/${tripId}/requests/${requestId}`,
+        `/api/trips/${tripId}/requests/${requestId}`,
         {status:"accepted"},
         { headers: { Authorization: `${token}` } }
       );
@@ -64,7 +64,7 @@ function TripRequests() {
     try {
       dispatch(showLoading());
       await api.patch(
-        `/trips/${tripId}/requests/${requestId}`,
+        `/api/trips/${tripId}/requests/${requestId}`,
         {status:"rejected"},
         { headers: { Authorization: ` ${token}` } }
       );
@@ -80,7 +80,7 @@ function TripRequests() {
     try {
       dispatch(showLoading());
       await api.delete(
-        `/trips/${id}`,
+        `/api/trips/${id}`,
         { headers: { Authorization: ` ${token}` } }
       );
       setMessage({ type: "success", text: "Trip deleted!" });

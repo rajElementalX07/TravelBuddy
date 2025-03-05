@@ -15,7 +15,7 @@ const Chat = () => {
   console.log("User Id : ",userId);
 
   const fetchChatMessages = async () => {
-    const chat = await api.get( "/chat/" + targetUserId, {
+    const chat = await api.get( "/api/chat/" + targetUserId, {
       headers: { Authorization: `${user.token}` } ,
     },
     );

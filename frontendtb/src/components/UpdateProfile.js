@@ -60,7 +60,7 @@ const UpdateProfile = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await api.put("/update-profile", profile, {
+      const response = await api.put("/api/update-profile", profile, {
         headers: { Authorization: `${token}` },
       });
 

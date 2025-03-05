@@ -18,7 +18,7 @@ function TripPosts() {
   const getTrips = async () => {
     try {
       dispatch(showLoading());
-      const response = await api.get("/trips/get-trips", {
+      const response = await api.get("/api/trips/get-trips", {
         headers: {
           Authorization: `${token}`,
         },
@@ -43,7 +43,7 @@ function TripPosts() {
     try {
       dispatch(showLoading());
       await api.post(
-        `/trips/${tripId}/request`,
+        `/api/trips/${tripId}/request`,
         {},
         {
           headers: { Authorization: ` ${token}` },

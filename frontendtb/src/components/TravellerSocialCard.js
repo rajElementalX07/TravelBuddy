@@ -12,7 +12,7 @@ const TravellerSocialCard = () => {
   useEffect(() => {
     const fetchTraveller = async () => {
       try {
-        const response = await api.get(`/traveller/${id}`,{
+        const response = await api.get(`/api/traveller/${id}`,{
             headers: {
                 Authorization: `${token}`,
               },

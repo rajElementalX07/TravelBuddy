@@ -39,7 +39,7 @@ const CreateTrip = () => {
     try {
 
       const response = await api.post(
-        "/trips/create-trip",
+        "/api/trips/create-trip",
         formData,
         { headers: { Authorization: `${token}` } }
       );

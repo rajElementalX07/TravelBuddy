@@ -44,7 +44,7 @@ function AuthCard() {
 
     try {
       dispatch(showLoading());
-      const response = await api.post("/user-login", {
+      const response = await api.post("/api/user-login", {
         email: email,
         password: password,
       });
