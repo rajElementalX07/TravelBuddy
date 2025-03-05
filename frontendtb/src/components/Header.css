@@ -1,0 +1,41 @@
+
+.btn-check:checked+.btn, .btn.active, .btn.show, .btn:first-child:active, :not(.btn-check)+.btn:active{
+    border-color: transparent !important ;
+}
+
+
+
+.dropdown-menu.show{
+    padding: 5px 5px; 
+    animation: slideDown 0.5s ease-in-out; 
+}
+
+@keyframes slideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+
+.dropdown-menu[data-bs-popper]{
+    left: -190% !important;
+}
+
+.dropdown-menu .dropdown-item:hover{
+    background-color: black;
+    color: white;
+}
+
+.dropdown-toggle.show::after{
+    transform: rotate(180deg);
+    transition: transform 0.3s ease-in-out;
+}
+.dropdown-toggle::after{
+    transform: rotate(0);
+    transition: transform 0.3s ease-in-out;
+}
