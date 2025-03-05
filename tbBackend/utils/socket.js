@@ -11,6 +11,7 @@ const getSecretRoomId = (userId, targetUserId) => {
 
 const initializeSocket = (server) => {
   const io = new Server(server, {
+    path: "/api/socket.io",
     cors: {
       origin: ["http://localhost:3000","https://travelbuddy-1-9yzi.onrender.com"]
     },
